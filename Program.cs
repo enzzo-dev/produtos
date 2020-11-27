@@ -54,15 +54,16 @@ namespace produtos
                         System.Console.WriteLine("Gostaria de cadastrar outro produto? s/n");
                         resposta = Console.ReadLine();
 
-                    } while(resposta == "sim" || resposta == "Sim");
+                    } while(resposta == "sim" || resposta == "Sim" || resposta == "s");
                 break;
 
                 case "2":
-                    //Listar Passagens
-                    for( var cont = 0 ; cont < 10 ; cont++)
+                    //Listar Produtos4
+
+                    for( var cont = 0 ; cont < nomes.Length ; cont++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            System.Console.WriteLine($"Produto {cont+1}: {nomes[cont]}");
+                            System.Console.WriteLine($"Produto {cont}: {nomes[cont]}");
                             System.Console.WriteLine($"Preço do {nomes[cont]}: {preco[cont]}");
                             System.Console.WriteLine($"Está em promoção? {respPromo}");
                             System.Console.WriteLine($"Valor com desconto: {Desconto(preco[cont] , valorPromo[cont])}");
@@ -74,7 +75,6 @@ namespace produtos
                     //Mostrar menu
                     Console.Clear();
                     MostrarMenu(escolha);
-
                 break;
 
                 case "4":
@@ -86,7 +86,8 @@ namespace produtos
                 break;
             }
 
-        } while (escolha != "0");
+        } while (escolha != "4");
+        
 
         //Funções
             double Desconto(float valor , float desconto){

@@ -11,3 +11,14 @@ C:\Users\User\OneDrive\Área de Trabalho\produtos\obj\Debug\netcoreapp3.1\produt
 C:\Users\User\OneDrive\Área de Trabalho\produtos\obj\Debug\netcoreapp3.1\produtos.dll
 C:\Users\User\OneDrive\Área de Trabalho\produtos\obj\Debug\netcoreapp3.1\produtos.pdb
 C:\Users\User\OneDrive\Área de Trabalho\produtos\obj\Debug\netcoreapp3.1\produtos.genruntimeconfig.cache
+C:\Users\dev\Desktop\produtos\bin\Debug\netcoreapp3.1\produtos.exe
+C:\Users\dev\Desktop\produtos\bin\Debug\netcoreapp3.1\produtos.deps.json
+C:\Users\dev\Desktop\produtos\bin\Debug\netcoreapp3.1\produtos.runtimeconfig.json
+C:\Users\dev\Desktop\produtos\bin\Debug\netcoreapp3.1\produtos.runtimeconfig.dev.json
+C:\Users\dev\Desktop\produtos\bin\Debug\netcoreapp3.1\produtos.dll
+C:\Users\dev\Desktop\produtos\bin\Debug\netcoreapp3.1\produtos.pdb
+C:\Users\dev\Desktop\produtos\obj\Debug\netcoreapp3.1\produtos.csprojAssemblyReference.cache
+C:\Users\dev\Desktop\produtos\obj\Debug\netcoreapp3.1\produtos.AssemblyInfoInputs.cache
+C:\Users\dev\Desktop\produtos\obj\Debug\netcoreapp3.1\produtos.AssemblyInfo.cs
+C:\Users\dev\Desktop\produtos\obj\Debug\netcoreapp3.1\produtos.dll
+C:\Users\dev\Desktop\produtos\obj\Debug\netcoreapp3.1\produtos.pdb
