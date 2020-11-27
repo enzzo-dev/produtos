@@ -7,10 +7,8 @@ namespace produtos
         static void Main(string[] args)
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("----------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow; 
             Console.WriteLine("---------------Sistema de estoque (Armazenamento de produtos)----------------");
-            Console.WriteLine("----------------------------------------------------------"); 
             Console.ResetColor();
 
             //Variáveis globais
@@ -19,13 +17,10 @@ namespace produtos
             string respPromo = "";
             string[] nomes = new string[10];
             float[] preco = new float[10];
-            bool promocao;
             float[] valorPromo = new float[10];
 
             do{
-            Console.WriteLine("Menu inicial");
             MostrarMenu(escolha);
-
             switch(escolha)
             {
                 case "1":
@@ -41,34 +36,35 @@ namespace produtos
                             preco[i] = float.Parse(Console.ReadLine());
                             System.Console.WriteLine($"Existe promoção para o {i+1}° produto? s/n");
                             respPromo = Console.ReadLine();
-                            if(respPromo == "s"){
-                                promocao = true;
+                            if(respPromo == "s" || respPromo == "S" || respPromo == "Sim" || respPromo == "sim"){ 
                                 System.Console.WriteLine($"Qual o valor da promoção?");
                                 valorPromo[i] = float.Parse(Console.ReadLine());
                             }
-                            i++;
                         } else {
                             System.Console.WriteLine("Limite de produtos excedidos!");
                         }
 
                         System.Console.WriteLine("Gostaria de cadastrar outro produto? s/n");
                         resposta = Console.ReadLine();
-
+                        i++;
                     } while(resposta == "sim" || resposta == "Sim" || resposta == "s");
                 break;
 
                 case "2":
-                    //Listar Produtos4
-
-                    for( var cont = 0 ; cont < nomes.Length ; cont++)
-                    {
+                    //Listar Produtos
+                    for( var cont = 0 ; cont < i; cont++){
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
-                            System.Console.WriteLine($"Produto {cont}: {nomes[cont]}");
-                            System.Console.WriteLine($"Preço do {nomes[cont]}: {preco[cont]}");
-                            System.Console.WriteLine($"Está em promoção? {respPromo}");
-                            System.Console.WriteLine($"Valor com desconto: {Desconto(preco[cont] , valorPromo[cont])}");
-                        Console.ResetColor();
-                    };
+                        System.Console.WriteLine($"Produto {cont+1}: {nomes[cont]}");
+                        System.Console.WriteLine($"Preço do {nomes[cont]}: {preco[cont]}");
+                        System.Console.WriteLine($"Está em promoção? {respPromo[cont]}");
+                            if(respPromo == "sim" || respPromo == "Sim" || respPromo == "s" || respPromo == "S")
+                            {
+                                System.Console.WriteLine($"Valor com desconto: {Desconto(preco[cont] , valorPromo[cont])}");
+                                System.Console.WriteLine($"Valor do desconto: {valorPromo[cont]}");
+                            } 
+                            Console.ResetColor();
+                    }
+                    
                 break;
 
                 case "3":
@@ -87,7 +83,7 @@ namespace produtos
             }
 
         } while (escolha != "4");
-        
+
 
         //Funções
             double Desconto(float valor , float desconto){
